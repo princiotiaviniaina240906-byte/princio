@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | RAKOTOVAO Tiaviniaina Princio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <main id="home-screen" class="active">
+        <header class="profile-header">
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Photo de Princio" class="profile-img">
+                <button class="btn-overlay" onclick="openSection('section-profil')">VOIR LE PROFIL</button>
+            </div>
+            <h1>RAKOTOVAO Tiaviniaina Princio</h1>
+            <p class="tagline">Étudiant L3 en Télécommunications – Réseaux & Systèmes</p>
+        </header>
+
+        <nav class="button-column">
+            <button class="menu-tile tile-1" onclick="openSection('section-profil')">
+                <i class="fas fa-user-graduate"></i>
+                <span>MON PROFIL & PARCOURS</span>
+            </button>
+            <button class="menu-tile tile-2" onclick="openSection('section-contact')">
+                <i class="fas fa-envelope-open-text"></i>
+                <span>CONTACTEZ-MOI</span>
+            </button>
+            <button class="menu-tile tile-3" onclick="openSection('section-liens')">
+                <i class="fas fa-external-link-alt"></i>
+                <span>LIENS EXTERNES</span>
+            </button>
+            <button class="menu-tile tile-4" onclick="openSection('section-projets')">
+                <i class="fas fa-project-diagram"></i>
+                <span>PROJETS RÉALISÉS</span>
+            </button>
+            <button class="menu-tile tile-5" onclick="openSection('section-temoignages')">
+                <i class="fas fa-comment-dots"></i>
+                <span>TÉMOIGNAGES</span>
+            </button>
+            <button class="menu-tile tile-6" onclick="openSection('section-newsletter')">
+                <i class="fas fa-paper-plane"></i>
+                <span>NEWSLETTER</span>
+            </button>
+        </nav>
+    </main>
+
+    <section id="section-profil" class="full-section">
+        <button class="close-btn" onclick="closeSection()"><i class="fas fa-times"></i> ANNULER</button>
+        <div class="content">
+            <h2>À Propos de Moi</h2>
+            <p class="bio">Étudiant dynamique en fin de cycle de Licence... spécialisé en Réseaux et Systèmes. Passionné par l'infrastructure informatique et l'IA générative.</p>
+            <h3>Formation</h3>
+            <p><strong>2023 - 2026 :</strong> Licence 3 (ES2I)<br><strong>2023 :</strong> Baccalauréat Scientifique Série C</p>
+            <h3>Compétences</h3>
+            <p>Cisco, VLAN, Linux (Debian/Ubuntu), VoIP, IA & Automatisation (Make, Zapier).</p>
+            <a href="cv.pdf" class="cv-link" download>📥 TÉLÉCHARGER LE CV (PDF)</a>
+        </div>
+    </section>
+
+    <section id="section-contact" class="full-section">
+        <button class="close-btn" onclick="closeSection()"><i class="fas fa-times"></i> ANNULER</button>
+        <div class="content">
+            <h2>Envoyez-moi un message</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Nom : Tiavina" required>
+                <input type="email" placeholder="Email : princiotiaviniaina240906@gmail.com" required>
+                <input type="text" placeholder="Objet : Proposition de Stage">
+                <textarea rows="5" placeholder="Votre message ici..."></textarea>
+                <button type="submit" class="send-btn">Envoyer le message</button>
+            </form>
+            <div class="info-direct">
+                <p><i class="fas fa-phone"></i> +261 38 53 132 94</p>
+                <p><i class="fas fa-map-marker-alt"></i> Andranomena Ambohimanarina, Tana VI</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-liens" class="full-section">
+        <button class="close-btn" onclick="closeSection()"><i class="fas fa-times"></i> ANNULER</button>
+        <div class="content">
+            <h2>Retrouvez-moi sur le web</h2>
+            <div class="link-grid">
+                <a href="https://github.com/tiavina" target="_blank" class="web-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/tiavina-ramarolahy-552177364" target="_blank" class="web-link">LinkedIn</a>
+                <a href="https://tiavina.pythonanywhere.com" target="_blank" class="web-link">Site Personnel</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-projets" class="full-section">
+        <button class="close-btn" onclick="closeSection()"><i class="fas fa-times"></i> ANNULER</button>
+        <div class="content">
+            <h2>Mes Réalisations</h2>
+            <div class="project-card">
+                <h3>Infrastucture Réseau Multi-sites</h3>
+                <p>Cisco Packet Tracer, OSPF, VLANs.</p>
+            </div>
+            <div class="project-card">
+                <h3>Serveur VoIP Asterisk</h3>
+                <p>Linux Debian, Protocole SIP.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-temoignages" class="full-section">
+        <button class="close-btn" onclick="closeSection()"><i class="fas fa-times"></i> ANNULER</button>
+        <div class="content">
+            <h2>Recommandations</h2>
+            <div class="quote">
+                <p>"Princio est un étudiant rigoureux..."</p>
+                <span>⭐⭐⭐⭐⭐ - Enseignant ES2I</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-newsletter" class="full-section">
+        <button class="close-btn" onclick="closeSection()"><i class="fas fa-times"></i> ANNULER</button>
+        <div class="content">
+            <h2>Newsletter Innovation</h2>
+            <input type="email" class="news-input" placeholder="Votre email ici...">
+            <button class="news-btn">S'INSCRIRE À LA VEILLE</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
